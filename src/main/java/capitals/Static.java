@@ -33,7 +33,7 @@ public class Static extends Credit {
     }
 
     public float getWysokoscRaty(){
-        this.kwotaRaty = (float) (kwota*pow(stalaOdsetkowa,liczbaRat) * ((stalaOdsetkowa -1)/ (pow(stalaOdsetkowa,liczbaRat)-1)))+oplataStala;
+        this.kwotaRaty = (float) ((kwota*pow(stalaOdsetkowa,liczbaRat) * ((stalaOdsetkowa -1)/ (pow(stalaOdsetkowa,liczbaRat)-1))));
         return kwotaRaty;
     }
 
@@ -44,7 +44,7 @@ public class Static extends Credit {
     }
 
     public float getKwotaRaty(){
-        return kwotaRaty;
+        return kwotaRaty + oplataStala;
     }
     public void setNrRaty(float nrRaty) {
         this.nrRaty = nrRaty;
